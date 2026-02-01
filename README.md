@@ -52,7 +52,7 @@ npm i -g vercel
 vercel --prod
 ```
 
-访问：https://prompt-master.vercel.app
+访问：https://raye-deng.github.io/promptmaster/
 
 ## 📈 增长策略
 

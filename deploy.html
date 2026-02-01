@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify 部署指南 - PromptMaster</title>
+</head>
+<body>
+    <h1>Netlify 部署指南</h1>
+
+    <h2>方法 1：拖放部署（最快）</h2>
+    <ol>
+        <li>访问 <a href="https://app.netlify.com/drop" target="_blank">https://app.netlify.com/drop</a></li>
+        <li>拖放 <code>prompt-templates-mvp</code> 文件夹到浏览器</li>
+        <li>Netlify 会自动部署</li>
+        <li>获得一个免费 URL（如 <code>prompt-master-xyz.netlify.app</code>）</li>
+    </ol>
+
+    <h2>方法 2：Netlify CLI</h2>
+    <pre><code>npm install -g netlify-cli
+netlify deploy --dir=prompt-templates-mvp --prod</code></pre>
+
+    <h2>方法 3：GitHub Pages</h2>
+    <ol>
+        <li>创建 GitHub 仓库并推送代码</li>
+        <li>在仓库 Settings → Pages 中启用 GitHub Pages</li>
+        <li>选择 <code>main</code> 分支作为源</li>
+        <li>访问 <code>https://[username].github.io/prompt-templates-mvp/</code></li>
+    </ol>
+
+    <h2>推荐：Netlify 拖放</h2>
+    <p>理由：</p>
+    <ul>
+        <li>无需安装 CLI</li>
+        <li>无需登录</li>
+        <li>部署速度最快（秒级）</li>
+        <li>自动 HTTPS</li>
+        <li>支持自定义域名</li>
+    </ul>
+
+    <h2>下一步</h2>
+    <p>选择一个部署方法，获得 URL 后，更新 <code>launch-checklist.md</code> 中的链接。</p>
+</body>
+</html>
