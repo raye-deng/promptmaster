@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptMaster - AI 提示词模板库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+                <span class="gradient-text">PromptMaster</span>
+            </h1>
+            <nav class="flex gap-6">
+                <a href="#templates" class="text-gray-300 hover:text-white transition">模板库</a>
+                <a href="#premium" class="text-gray-300 hover:text-white transition">高级模板</a>
+                <a href="#features" class="text-gray-300 hover:text-white transition">功能</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h2 class="text-5xl font-bold mb-6">
+            超过<span class="gradient-text">500+</span> 个高质量 AI 提示词模板
+        </h2>
+        <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            提升你的 AI 生产力，节省时间，获得更好的结果
+        </p>
+        <div class="flex gap-4 justify-center">
+            <a href="#templates" class="bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition">
+                浏览免费模板
+            </a>
+            <a href="#premium" class="border border-gray-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition">
+                查看高级版 ($19/月)
+            </a>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section id="templates" class="max-w-6xl mx-auto px-4 py-16">
+        <h3 class="text-3xl font-bold mb-8 text-center">免费模板</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Template 1: Code Review -->
+            <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-750 transition">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">代码审查</span>
+                    <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">免费</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    作为资深工程师，审查以下代码。重点关注：1. 性能优化 2. 潜在 bug 3. 代码可读性 4. 最佳实践
+                </p>
+                <button onclick="copyPrompt(this)" class="w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-3 rounded-lg font-medium transition">
+                    复制提示词
+                </button>
+                <textarea class="hidden" data-prompt="作为资深工程师，审查以下代码。重点关注：1. 性能优化 2. 潜在 bug 3. 代码可读性 4. 最佳实践"></textarea>
+            </div>
+
+            <!-- Template 2: Content Writing -->
+            <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-750 transition">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">内容创作</span>
+                    <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">免费</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    以专家的内容创作者身份，为一篇关于 [主题] 的文章撰写引人入胜的内容。要求：结构清晰，观点独特，数据支撑。
+                </p>
+                <button onclick="copyPrompt(this)" class="w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-3 rounded-lg font-medium transition">
+                    复制提示词
+                </button>
+                <textarea class="hidden" data-prompt="以专家的内容创作者身份，为一篇关于 [主题] 的文章撰写引人入胜的内容。要求：结构清晰，观点独特，数据支撑。"></textarea>
+            </div>
+
+            <!-- Template 3: Email Writing -->
+            <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-750 transition">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">邮件撰写</span>
+                    <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">免费</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    撰写一封专业邮件给 [接收者]，目的是 [目的]。要求：语气恰当，重点突出，行动明确。
+                </p>
+                <button onclick="copyPrompt(this)" class="w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-3 rounded-lg font-medium transition">
+                    复制提示词
+                </button>
+                <textarea class="hidden" data-prompt="撰写一封专业邮件给 [接收者]，目的是 [目的]。要求：语气恰当，重点突出，行动明确。"></textarea>
+            </div>
+
+            <!-- Template 4: Data Analysis -->
+            <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-750 transition">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">数据分析</span>
+                    <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">免费</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    分析以下数据，提供洞察和建议。数据：[数据内容]。要求：发现趋势，识别异常，提出可行动建议。
+                </p>
+                <button onclick="copyPrompt(this)" class="w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-3 rounded-lg font-medium transition">
+                    复制提示词
+                </button>
+                <textarea class="hidden" data-prompt="分析以下数据，提供洞察和建议。数据：[数据内容]。要求：发现趋势，识别异常，提出可行动建议。"></textarea>
+            </div>
+
+            <!-- Template 5: Research -->
+            <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-750 transition">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">研究总结</span>
+                    <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">免费</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    研究 [主题]，总结关键发现。要求：信息准确，结构清晰，包含来源引用。
+                </p>
+                <button onclick="copyPrompt(this)" class="w-full bg-indigo-600 hover:bg-indigo-700 px-4 py-3 rounded-lg font-medium transition">
+                    复制提示词
+                </button>
+                <textarea class="hidden" data-prompt="研究 [主题]，总结关键发现。要求：信息准确，结构清晰，包含来源引用。"></textarea>
+            </div>
+
+            <!-- Template 6 (Premium placeholder) -->
+            <div id="premium" class="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 border border-indigo-500/50 rounded-xl p-6 hover:border-indigo-400 transition relative">
+                <div class="absolute -top-3 -right-3">
+                    <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">PRO</span>
+                </div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-semibold">代码生成 + 解释</span>
+                    <span class="bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-sm">高级</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    生成完整功能代码，并逐行解释实现逻辑。包括最佳实践、错误处理、性能优化。
+                </p>
+                <button onclick="copyPrompt(this)" class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 px-4 py-3 rounded-lg font-medium transition">
+                    复制提示词
+                </button>
+                <p class="text-gray-500 text-sm mt-3">💎 高级模板，订阅后解锁</p>
+                <textarea class="hidden" data-prompt="生成完整功能代码，并逐行解释实现逻辑。包括最佳实践、错误处理、性能优化。"></textarea>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Email Collection -->
+    <section class="bg-gray-800 py-16">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">获取更多免费模板</h3>
+            <p class="text-gray-400 mb-6">
+                订阅我们的邮件列表，每周获取新的免费提示词模板
+            </p>
+            <form id="email-form" onsubmit="submitEmail(event)" class="flex max-w-md mx-auto gap-3">
+                <input
+                    type="email"
+                    placeholder="你的邮箱"
+                    required
+                    class="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                >
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold transition">
+                    订阅
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-6xl mx-auto px-4 py-16">
+        <h3 class="text-3xl font-bold mb-12 text-center">为什么选择 PromptMaster？</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h-2V3H2v11h11zM6 15l-3-3 3-3h2v2h-3l3-3zM5 5v2H2v2h2v-2h2v3h3v-2h-3v2h2v-2h2v2h2v-2h2v-2h2v-2h2z"/>
+                    </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-2">即时可用</h4>
+                <p class="text-gray-400">复制即用，无需登录</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 0l-4 4-4-2-2-4-4m6 0l-4 4"/>
+                    </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-2">持续更新</h4>
+                <p class="text-gray-400">每周新增模板</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-4 8 4 0 0 0 0-8 8-4 0-0 0 8-8m8 4c0 0 0 0 0-8 8 4 0 0 0-8-8 8 4 0 0 0-8 8 4 0 0 0 8 8 4"/>
+                    </svg>
+                </div>
+                <h4 class="text-xl font-semibold mb-2">质量保证</h4>
+                <p class="text-gray-400">经过验证的提示词</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8 text-center text-gray-500">
+        <p>&copy; 2026 PromptMaster. 用 ❤️ 构建</p>
+    </footer>
+
+    <script>
+        function copyPrompt(button) {
+            const card = button.closest('.bg-gray-800, .bg-gradient-to-br');
+            const textarea = card.querySelector('textarea');
+            const prompt = textarea.dataset.prompt;
+
+            navigator.clipboard.writeText(prompt).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✓ 已复制';
+                button.classList.add('bg-green-600');
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('bg-green-600');
+                }, 2000);
+            });
+        }
+
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email-form').querySelector('input[type="email"]').value;
+            console.log('Email submitted:', email);
+            alert('感谢订阅！我们会发送最新模板到你的邮箱。');
+        }
+    </script>
+</body>
+</html>
